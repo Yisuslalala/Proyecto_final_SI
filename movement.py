@@ -3,9 +3,10 @@ import time
 
 
 def sentido_favor_reloj_m1(pwm, m1_pins):
-    pwm.ChangeDutyCycle(33 * (0+1))
+    pwm.ChangeDutyCycle(33 * (2+1))
     GPIO.output(m1_pins[0], GPIO.HIGH)
     GPIO.output(m1_pins[1], GPIO.LOW)
+
     time.sleep(3)
 
 
