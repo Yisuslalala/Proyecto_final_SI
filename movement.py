@@ -2,6 +2,20 @@ import RPi.GPIO as GPIO
 import time
 
 
+def sentido_favor_reloj_m1(pwm, m1_pins):
+    pwm.ChangeDutyCycle(33 * (0+1))
+    GPIO.output(m1_pins[0], GPIO.HIGH)
+    GPIO.output(m1_pins[1], GPIO.LOW)
+    time.sleep(3)
+
+
+def sentido_favor_reloj_m2(pwm, m2_pins):
+    pwm.ChangeDutyCycle(33 * (0+1))
+    GPIO.output(m2_pins[0], GPIO.HIGH)
+    GPIO.output(m2_pins[1], GPIO.LOW)
+    time.sleep(3)
+
+
 def main() -> None:
     GPIO.setmode(GPIO.BOARD)
 
@@ -76,17 +90,3 @@ GPIO.output(m1_pins[0], GPIO.LOW)
         GPIO.output(m2_pins[0], GPIO.LOW)
         time.sleep(1)'''
 #
-
-
-def sentido_favor_reloj_m1(pwm, m1_pins):
-    pwm.ChangeDutyCycle(33 * (0+1))
-    GPIO.output(m1_pins[0], GPIO.HIGH)
-    GPIO.output(m1_pins[1], GPIO.LOW)
-    time.sleep(3)
-
-
-def sentido_favor_reloj_m2(pwm, m2_pins):
-    pwm.ChangeDutyCycle(33 * (0+1))
-    GPIO.output(m2_pins[0], GPIO.HIGH)
-    GPIO.output(m2_pins[1], GPIO.LOW)
-    time.sleep(3)
