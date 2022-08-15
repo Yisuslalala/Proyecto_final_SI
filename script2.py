@@ -65,7 +65,7 @@ def retrocede_segundos():
 
 
 def gira_90_grados_derecha():
-    pwm_pin.ChangeDutyCycle(80)
+    pwm_pin.ChangeDutyCycle(100)
     Giro_Favor_Reloj_MotorA()
     Giro_Contra_Reloj_MotorB()
     time.sleep(2)
@@ -73,7 +73,7 @@ def gira_90_grados_derecha():
 
 
 def gira_90_grados_izquierda():
-    pwm_pin.ChangeDutyCycle(80)
+    pwm_pin.ChangeDutyCycle(100)
     Giro_Contra_Reloj_MotorA()
     Giro_Favor_Reloj_MotorB()
     time.sleep(2)
