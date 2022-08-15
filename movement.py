@@ -50,7 +50,17 @@ def main() -> None:
         GPIO.output(m2_pins[0], GPIO.LOW)
         time.sleep(3)
 
-        GPIO.output(m1_pins[0], GPIO.LOW)
+
+if __name__ == "__main__":
+    main()
+    GPIO.cleanup()
+    print("Done")
+    exit(0)
+    pass
+
+# '''
+'''
+GPIO.output(m1_pins[0], GPIO.LOW)
         GPIO.output(m1_pins[1], GPIO.HIGH)
         GPIO.output(m2_pins[1], GPIO.LOW)
         GPIO.output(m2_pins[0], GPIO.HIGH)
@@ -60,12 +70,5 @@ def main() -> None:
         GPIO.output(m1_pins[1], GPIO.LOW)
         GPIO.output(m2_pins[1], GPIO.LOW)
         GPIO.output(m2_pins[0], GPIO.LOW)
-        time.sleep(1)
-
-
-if __name__ == "__main__":
-    main()
-    GPIO.cleanup()
-    print("Done")
-    exit(0)
-    pass
+        time.sleep(1)'''
+#
