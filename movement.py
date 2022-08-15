@@ -38,7 +38,7 @@ def main() -> None:
     pwm.ChangeDutyCycle(100)
 
     sentido_favor_reloj_m1(pwm, m1_pins)
-    sentido_favor_reloj_m2(pwm, m2_pins)
+    #sentido_favor_reloj_m2(pwm, m2_pins)
 
     # for i in range(3):
     #     GPIO.output(m1_pins[0], GPIO.HIGH)
