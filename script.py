@@ -11,7 +11,7 @@ in2 = 15
 in3 = 35
 in4 = 37
 # configura los pines segun el microprocesador Broadcom
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 # configura los pines como salidas
 # GPIO.setup(ena,GPIO.OUT)
 # GPIO.setup(enb,GPIO.OUT)
@@ -60,7 +60,7 @@ try:
         cmd = cmd.lower()
         motor = cmd[0]
         direccion = cmd[1]
-        velocidad = cmd[2:5]
+        velocidad = cmd[2:]
 
         if motor == "a":
             if direccion == "f":
@@ -72,7 +72,6 @@ try:
             else:
                 print("comando no reconocido")
             pwm_pin.ChangeDutyCycle(int(velocidad))
-            print
 
         elif motor == "b":
             if direccion == "f":
@@ -83,16 +82,11 @@ try:
             else:
                 print("comando no reconocido")
             pwm_pin.ChangeDutyCycle(int(velocidad))
-            print
         else:
-            print
             print("comando no reconocido")
-            print
 except KeyboardInterrupt:
     pwm_pin.stop()
     GPIO.cleanup()
     os.system('clear')
-    print
     print("Programa Terminado por el usuario")
-    print
     exit()
